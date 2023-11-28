@@ -11,8 +11,8 @@ os.system("clear") #Je clear aussi ma fenêtre pour plus de clareté. Je ne l'ai
 #-----------------------J'ouvre mon fichier en mode lecture------------------------------
 
 
-fich=open(sys.argv[1], "r", encoding='ISO-8859-1') #Le fichier correspond au premier paramètre donné au programme intensite.py.
-
+fich=open(sys.argv[1], "r", encoding="utf-8") #Le fichier correspond au premier paramètre donné au programme intensite.py.
+#Ouverture du fichier avec le bon encodage pour l'affichage des commentaires.
 
 
 #-----------------------J'initialise mes listes et dictionnaires------------------------------
@@ -27,6 +27,7 @@ maximum=[] #liste pour les maximums des intervalles
 minimum=[] #liste pour les minimums des intervalles
 moyenne=[] #liste pour les moyennes des intervalles
 nombre=[] #liste pour le nombre de valeurs d'intensités dans chaque intervalle
+commentaires=[] #Je récupère les commentaires du fichier.
 
 
 
@@ -65,7 +66,20 @@ if sep_none=="N":
 
 
 nombre_total_lignes = len(list(fich)) 
-premiere_ligne=True #Variable de contrôle pour détecter la première ligne.
+
+#Je lui demande si il a un nom à ses colonnes au début qui n'est pas défini comme un commentaire : 
+nom_colonne=str(input("\033[1;32mSi la première ligne de vos données correspond aux noms de vos colonnes et qu'elle n'est pas mise en commentaire (avec le #) tapez Y, sinon tapez N : \033[0m"))
+
+somme_nom_colonne=0 #Pour compter le nombre de tentatives avec des valeurs invalides.
+
+if (nom_colonne!="Y" and nom_colonne!="N"):
+    somme_nom_colonne+=1
+    if somme_nom_colonne==3: #Lorsqu'il a dejà fait trop de tentatives (3).
+        print("\033[1;91mTrop de tentatives erronées. Veuillez relancer le programme une fois que vous saurez quelle valeur rentrer.\033[0m")
+        sys.exit()
+    else: #Sinon je lui laisse encore une chance.
+        nom_colonne=str(input("\033[1;91mValeur remplie incorrecte, vous avez en tout 3 chances.\nSi la première ligne de vos données correspond aux noms de vos colonnes et qu'elle n'est pas mise en commentaire (avec le #) tapez Y, sinon tapez N :  \033[0m"))
+
 
 
 if nombre_total_lignes == 1 : #Je regarde si le fichier n'a qu'une seule ligne ou pas.
@@ -74,9 +88,12 @@ if nombre_total_lignes == 1 : #Je regarde si le fichier n'a qu'une seule ligne o
 else :
     fich.seek(0) #Je rembobine au début de mon fichier.
     for indice, ligne in enumerate(fich): #Je parcours toutes les lignes de mon fichier.
-        if premiere_ligne: #Je fais en sorte de sauter la première ligne du fichier dédiée aux noms des colonnes. 
-            premiere_ligne = False
-            continue 
+        if (ligne.startswith("#") or ligne.startswith(">")):#Pour repérer les commentaires
+            commentaires.append(ligne) #Je récupère ces commentaires dans une liste.
+            continue
+        elif nom_colonne=="Y": #Pour enlever la première ligne de mon fichier si elle correspond aux noms des colonnes.
+            nom_colonne="F"
+            continue
         else : #Puis je traite les autres lignes.
             ligne=ligne.strip() 
             if sep_none=="Y":
@@ -91,6 +108,19 @@ else :
             longueur=[longueur[k].replace(",",".") for k in range(0,len(longueur))]
             lamba.append(longueur[colonne_longueur_onde-1]) #Je rajoute mes valeurs de longueurs d'ondes à la liste correspondante.
             intens.append(longueur[colonne_intens-1]) #Je rajoute mes valeurs d'intensitées à la liste correspondante. 
+
+
+
+
+#-----------------------Affichage des commentaires------------------------------
+
+print("\033[4;96mCommentaires du fichier :\033[0m \n")
+for i in range(0,len(commentaires)):
+    commentaires[i]=commentaires[i].strip("#")
+    commentaires[i]=commentaires[i].strip("\n")
+    print("\033[96m"+commentaires[i]+"\033[0m")
+    if i==len(commentaires)-1:
+        print("\n")
 
 
 
@@ -192,7 +222,7 @@ for i in range(0, nb_fenetres): #D'où l'utilité de calculer le nombre de fenê
 indice=0 #Pour parcourir mon dictionnaire, valeur que j'incrémenterai.
 for i in dico.keys():
     print("Intervalle :",i,"\n nombre de données d'intensité :",nombre[indice],"\n minimum des données : ",minimum[indice],
-          "\n maximum des données : ", maximum[indice], "\n moyenne des données : ",moyenne[indice],"\n")
+          "\n maximum des données : ", maximum[indice], "\n moyenne des données : ",round(moyenne[indice],2),"\n")
     indice += 1
 
 
