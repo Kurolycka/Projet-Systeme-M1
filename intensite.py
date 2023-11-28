@@ -1,3 +1,4 @@
+#commentaire à la con 
 
 #Importation des modules nécessaires et autorisés :
 import sys
