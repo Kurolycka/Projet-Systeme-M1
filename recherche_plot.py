@@ -79,7 +79,7 @@ for i in range(deb_ind,fin_ind+1):
 #-----------------------Je lui demande si il veut que j'affiche des données correspondant au graphe------------------------------
 
 
-option_affichage=str(input("Voulez vous afficher les données (minimum, maximum...) correspondant au graphe ? Si oui tapez Y sinon tapez N: "))#Je lui demande si il veut que j'affiche les données.
+option_affichage=str(input("\033[1;32mVoulez vous afficher les données (minimum, maximum...) correspondant au graphe ? Si oui tapez Y sinon tapez N: \033[0m"))#Je lui demande si il veut que j'affiche les données.
 while (option_affichage !="Y" and option_affichage != "N"): #Si il me répond pas la bonne chose.
     print("La valeur rentrée n'est pas correcte.") #Je lui demande en boucle une réponse au bon format et lui affiche un message d'erreur.
     option_affichage=str(input("Voulez vous afficher les données (minimum, maximum...) correspondant au graphe ? Si oui tapez Y sinon tapez N: "))
@@ -95,8 +95,24 @@ if option_affichage=="Y": #Je lui affiche les données si il répond positivemen
 
 #-----------------------J'affiche le graphe------------------------------
 
+#Je commence par lui demander si il veut afficher des points ou bien les relier.
+scatter_rep=str(input("\033[1;32mSi vous voulez afficher le graphe sous forme de points non reliées tapez Y, sinon tapez N: \033[0m"))
 
-plt.plot(x_long,y_inten,color="purple")
+somme_scatter=0 #Je définis une valeur pour savoir le nombre de tentatives effectuées par l'utilisateur pour me donner une réponse valide. 
+
+if (scatter_rep!="Y" and scatter_rep!="N"):
+    somme_scatter+=1
+    if somme_scatter==3: #Lorsqu'il a dejà fait trop de tentatives (3).
+        print("\033[1;91mTrop de tentatives erronées. Veuillez relancer le programme une fois que vous saurez quelle valeur rentrer.\033[0m")
+        sys.exit()
+    else: #Sinon je lui laisse encore une chance.
+        scatter_rep=str(input("\033[1;91mValeur remplie incorrecte, vous avez en tout 3 chances.\nSi vous voulez afficher le graphe sous forme de points non reliées tapez Y sinon tapez N : \033[0m"))
+
+if scatter_rep=="Y":
+    plt.scatter(x_long,y_inten,color="purple")
+else:
+    plt.plot(x_long,y_inten)
+
 plt.xlabel("Longueur d'onde ("+unite_long_onde+")")
 plt.ylabel("Intensité ("+unite_intens+")")
 plt.title("Graphe de l'intensité pour un intervalle de longueur d'onde fourni")
