@@ -1,5 +1,6 @@
-#afficher le petit commentaire d'info au début 
-#Regarder si sa première ligne est le nom des colonnes ou pas.
+#Besoin de faire le README
+#Mettre dans le main que les commentaires pas traité et que les  lignes > sont automatiquement pas triées
+#et que les commentaires seront affichés
 
 #-----------------Création de l'help du programme---------------------------------
 
@@ -20,26 +21,26 @@ if [ "$1" == "-h" ] || [ "$1" == "-help" ]; then #Affichage de l'help de base, -
 elif [ "$1" == "-hp" ]; then #Affichage d'une des ramifications de l'help qui est -hp pour les paramètres.
     echo -e "\e[1;32mAide dédiée aux paramètres. Pour revenir à l'aide principale utilisez l'option -h ou bien l'option -help.\e[0m
 
-    \e[1;36;4mChemin du fichier :\e[0m  Si vous êtes actuellement dans le répertoire où se trouve votre fichier vous pouvez simplement mettre le nom du fichier ou bien ./nom_du_fichier. Sinon veuillez indiquer le chemin complet.
+    \e[1;36;4mChemin du fichier (chemin):\e[0m  Si vous êtes actuellement dans le répertoire où se trouve votre fichier vous pouvez simplement mettre le nom du fichier ou bien ./nom_du_fichier. Sinon veuillez indiquer le chemin complet.
     Le chemin du fichier doit forcément correspondre à un fichier régulier existant ayant l'extension csv ou txt. Il ne doit également pas être vide.
     Exemple : /mnt/c/Users/33782/Desktop/Donnees.txt
     
-    \e[1;36;4mNuméro de la colonne contenant les longueurs d'ondes :\e[0m  Doit être un nombre entier strictement positif et ne doit pas être supérieur au nombre de colonnes contenues dans votre fichier.
+    \e[1;36;4mNuméro de la colonne contenant les longueurs d'ondes (colonne_longueur_onde) :\e[0m  Doit être un nombre entier strictement positif et ne doit pas être supérieur au nombre de colonnes contenues dans votre fichier.
     La première colonne de votre fichier a le numéro 1 et non le numéro 0. 
     
-    \e[1;36;4mNuméro de la colonne contenant les intensitées :\e[0m  Doit être un nombre entier strictement positif et ne doit pas être supérieur au nombre de colonnes contenues dans votre fichier.
+    \e[1;36;4mNuméro de la colonne contenant les intensitées (colonne_intensitees) :\e[0m  Doit être un nombre entier strictement positif et ne doit pas être supérieur au nombre de colonnes contenues dans votre fichier.
     La première colonne de votre fichier a le numéro 1 et non le numéro 0. 
     
-    \e[1;36;4mTaille du pas :\e[0m  Doit être un nombre strictement positif. Cela peut être un entier comme un float, cependant si vous voulez un float rentrez par exemple 12.6 et non 12,6. 
+    \e[1;36;4mTaille du pas (taille_fenetre) :\e[0m  Doit être un nombre strictement positif. Cela peut être un entier comme un float, cependant si vous voulez un float rentrez par exemple 12.6 et non 12,6. 
 
-    \e[1;36;4mUnité de vos longueurs d'ondes :\e[0m  Il n'y a pas de conditions sur ce paramètre. Il servira à spécifier l'abscisse de votre graphe.
+    \e[1;36;4mUnité de vos longueurs d'ondes (unite_long_onde) :\e[0m  Il n'y a pas de conditions sur ce paramètre. Il servira à spécifier l'abscisse de votre graphe.
 
-    \e[1;36;4mUnité de vos intensités :\e[0m  Il n'y a pas de conditions sur ce paramètre. Il servira à spécifier l'ordonnée de votre graphe.
+    \e[1;36;4mUnité de vos intensités (unite_intens) :\e[0m  Il n'y a pas de conditions sur ce paramètre. Il servira à spécifier l'ordonnée de votre graphe.
 
-    \e[1;36;4mLongueur d'onde de début d'intervalle :\e[0m  Doit être un nombre positif (0 autorisé). Il peut être un float comme un entier mais si vous voulez un float rentrez par exemple 128.3 et non 128,3. 
+    \e[1;36;4mLongueur d'onde de début d'intervalle (long_deb) :\e[0m  Doit être un nombre positif (0 autorisé). Il peut être un float comme un entier mais si vous voulez un float rentrez par exemple 128.3 et non 128,3. 
     Renseignez la dans l'unité que vous avez choisit pour le paramètre 'Unité de vos longueurs d'ondes'.
 
-    \e[1;36;4mLongueur d'onde de fin d'intervalle :\e[0m  Doit être un nombe strictement positif (0 non autorisé). Il peut être un float comme un entier mais si vous voulez un float rentrez par exemple 128.3 et non 128,3.
+    \e[1;36;4mLongueur d'onde de fin d'intervalle (long_fin) :\e[0m  Doit être un nombe strictement positif (0 non autorisé). Il peut être un float comme un entier mais si vous voulez un float rentrez par exemple 128.3 et non 128,3.
     Renseignez la dans l'unité que vous avez choisit pour le paramètre 'Unité de vos longueurs d'ondes'.
 
     \e[1;32mPour certains paramètres vous aurez de nouvelles chances de rentrer le bon paramètre sans quitter le programme si vous vous êtes trompés.\e[0m
@@ -93,7 +94,7 @@ read -p "Entrez le chemin de votre fichier: " chemin #Je demande à l'utilisateu
 
 #Je vérifie si ce chemin correspond à un fichier régulier qui existe :
 if ! [ -f "$chemin" ]; then
-    echo "Le chemin renseigné ne correspond pas à un fichier régulier qui existe. Veuillez relancer le programme avec un chemin correct."
+    echo -e "\e[1;31mLe chemin renseigné ne correspond pas à un fichier régulier qui existe. Veuillez relancer le programme avec un chemin correct.\e[0m"
     exit
 fi
 
@@ -101,14 +102,14 @@ fi
 ext=$(echo $chemin | rev | cut -d/ -f1 | rev)
 ext=$(echo $ext | rev | cut -d. -f1 | rev)
 if [ "$ext" != "csv" ] && [ "$ext" != "txt" ]; then
-    echo "Votre fichier doit avoir l'extension csv ou txt"
+    echo -e "\e[1;31mVotre fichier doit avoir l'extension csv ou txt\e[0m"
     exit
 fi 
 
 #Je vérifie si le fichier est vide ou pas :
 taille=$(du -h "$chemin" | cut -f1)
 if [ $taille == 0 ]; then
-    echo "Votre fichier est vide. Veuillez relancer le programme avec un fichier qui n'est pas vide."
+    echo -e "\e[1;31mVotre fichier est vide. Veuillez relancer le programme avec un fichier qui n'est pas vide.\e[0m"
     exit
 fi
 
@@ -242,7 +243,7 @@ done
 #-----------------------Execution du programme------------------------------
 
 
-python3 recherche_plot.py "$chemin" "$taille_fenetre" "$colonne_longueur_onde" "$colonne_intensitees" "$long_deb" "$long_fin" "$unite_long_onde" "$unite_intens" #je peux donc à présent lancer mon script recherche_plot
+python3 recherche_plot.py "$chemin" "$taille_fenetre" "$colonne_longueur_onde" "$colonne_intensitees" "$long_deb" "$long_fin" "$unite_long_onde" "$unite_intens"
 
 
 
