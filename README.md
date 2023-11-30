@@ -13,6 +13,8 @@ main.sh : Ce fichier est entièrement codé en bash et sert principalement à de
 
 intensite.py : Ce fichier est entièrement codé en python3 . Il sert à récupérer vos données et à les traiter. A partir de vos données il créera un dictionnaire et une liste. La liste servira au fichier recherche_plot.py tandis que le dictionnaire servira à l'affichage de vos valeurs. En effet en fin d'exécution ce fichier affichera les commentaires de votre fichier suivit des intervalles de votre dictionnaire selon le pas choisit préalablement et certaines informations utiles sur ces intervalles. Ce fichier est commenté.
 
+recherche_plot.py : Ce fichier est entièrement codé en python3. Il sert à réaliser une représentation graphique de l'intervalle de longueur d'ondes que vous aurez renseigné en prenant en compte la taille du pas que vous avez choisit pour vos intervalles. Ce fichier est commenté.
+
 --Modules utilisés--
 
 Les modules des bibliothèques python utilisés dans les différents fichiers sont les suivants : sys, os, re, matplotlib.
@@ -87,6 +89,16 @@ Il vous sera aussi demandé si vous souhaitez afficher votre graphe sous la form
 Le graphe possédera une grille afin que vous puissiez plus facilement réaliser une étude visuelle. 
 
 Il possédera également un nom d'abscisse, un nom d'ordonnée et un titre. 
+
+Si votre valeur de début d'intervalle de graphe est plus petite que la plus petite donnée de longueur d'onde de votre fichier alors par défaut votre graphe commencera à la plus petite donnée de longueur d'onde de votre fichier.
+De manière similaire si votre valeur de fin d'intervalle de graphe est plus grande que la plus grande donnée de longueur d'onde de votre fichier alors par défaut votre graphe se finira à la plus grande donnée de longueur d'onde de votre fichier.
+
+Si votre intervalle choisit pour le graphe n'est pas du tout contenu dans les données de votre fichier alors le graphe montrera l'entièreté de vos données pour que vous puissez vous rendre compte d'intervalles qui correspondrait mieux à vos données.
+
+Si vous voulez avoir strictement l'intervalle que vous avez choisit de graphé alors vous devez choisir un pas de 1 pour vos intervalles de dictionnaire.
+
+Si vous choissiez une longueur d'onde fin d'intervalle plus petite que la longueur d'onde de votre début d'intervalle alors vous aurez un graphe allant de l'intervalle de dictionnaire contenant votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
+
 
 --SOS--
 
