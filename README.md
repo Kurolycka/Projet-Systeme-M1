@@ -80,6 +80,14 @@ Fonctionnement du graphe : Vous fournissez une valeur de début d'intervalle pou
 Ensuite dans le fichier recherche_plot.py le programme regarde dans quel intervalle se situe votre valeur de début d'intervalle pour le graphe et garde en mémoire cette intervalle. Il fait ensuite de même pour votre valeur de fin d'intervalle pour le graphe.
 Ce qui sera au final affiché sur le graphe sera les intervalles dans lesquels sont contenus vos valeurs de début et de fin d'intervalle pour le graphe ainsi que tous les intervalles entre.
 
+Il vous sera demandé si vous souhaitez afficher des données relatives à votre graphe (valeur max de longueur d'onde et d'intensitée, valeur min de longueur d'onde et d'intensité, moyenne de l'intensité et moyenne de la longueur d'onde). Vous n'aurez qu'à répondre par oui (Y) ou non (N). 
+
+Il vous sera aussi demandé si vous souhaitez afficher votre graphe sous la forme de points non reliés (scatter), vous n'aurez à nouveau qu'à répondre oui (Y) ou non (N). Si vous répondez non alors votre graphe sera affiché sous la forme d'une courbe continue violette.
+
+Le graphe possédera une grille afin que vous puissiez plus facilement réaliser une étude visuelle. 
+
+Il possédera également un nom d'abscisse, un nom d'ordonnée et un titre. 
+
 --SOS--
 
 Comment trouver le chemin de mon fichier ?
