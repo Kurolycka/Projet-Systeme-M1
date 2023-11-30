@@ -7,7 +7,7 @@ Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fich
 
 Ce programme ne nécessite pas d'arguments, cependant si vous lui en mettez qui n'est pas une option il affichera un message d'erreur et vous indiquera comment accéder à l'aide du programme. 
 
-## Fichiers du projet
+## :page_facing_up: Fichiers du projet
 
 main.sh : Ce fichier est entièrement codé en bash et sert principalement à deux choses : récupérer et vérifier les paramètres nécessaires aux autres fichiers et donner les paramètres nécessaires à ces fichiers pour que recherche_plot.py faisant appel à intensite.py puisse s'exécuter. Ce fichier est commenté.
 
@@ -15,7 +15,7 @@ intensite.py : Ce fichier est entièrement codé en python3 . Il sert à récup�
 
 recherche_plot.py : Ce fichier est entièrement codé en python3. Il sert à réaliser une représentation graphique de l'intervalle de longueur d'ondes que vous aurez renseigné en prenant en compte la taille du pas que vous avez choisit pour vos intervalles. Ce fichier est commenté.
 
-## Modules utilisés
+## :books: Modules utilisés
 
 Les modules des bibliothèques python utilisés dans les différents fichiers sont les suivants : sys, os, re, matplotlib.
 
