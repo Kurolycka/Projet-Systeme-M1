@@ -1,9 +1,9 @@
 # Projet-Systeme-M1
-Première version :
 
-Ce programme indexe les intensités par fenêtres de longueurs d'ondes selon une taille de pas que vous lui renseigné. Il permet aussi d'afficher un graphe des intensités en fonction des longueurs d'ondes pour un intervalle fourni.
+Ce programme traite un fichier que vous lui renseignez contenant des longueurs d'ondes et des intensitées correspondantes. Il indexe dans un dictionnaire les intensités par fenêtres de longueurs d'ondes selon une taille de pas que vous lui renseigné. Il permet aussi d'afficher un graphe des intensités en fonction des longueurs d'ondes pour un intervalle fourni en prenant en compte les intervalles de votre dictionnaire.
 
-#blabla doit être contenu dans le même répertoire.
+Les fichiers main.sh, intensite.py et recherche_plot.py doivent être enregistrés dans le même répertoire/dossier. Ce n'est cependant pas une obligation pour le fichier que vous souhaitez traité. 
+Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fichier main.sh. Si vous êtes dans le répertoire où ce dernier est enregistrés vous pouvez juste taper ./main.sh 
 
 Ce programme ne nécessite pas d'arguments, cependant si vous lui en mettez qui n'est pas une option il affichera un message d'erreur et vous indiquera comment accéder à l'aide du programme. 
 
@@ -104,6 +104,16 @@ Si vous choissiez une longueur d'onde fin d'intervalle plus petite que la longue
 
 Comment trouver le chemin de mon fichier ?
 
+Si vous êtez sous Windows alors ouvrez l'explorateur de fichiers et allez jusqu'à l'emplacement du fichier. Ensuite faites un clic droit sur le fichier et sélectionnez "Propriétés". Dnas l'onglet "Général" vous verrez le chemin complet du fichier sous "Emplacement".
+
+Si vous êtes sous macOs ou Linux alors vous pouvez ouvrir le terminal puis utilisez la commande "cd" pour naviguer jusqu'àau répertoire du fichier. Tapez alors "pwd" pour afficher le chemin du répertoire actuel. Vous n'aurez plus qu'à y ajouter le nom du fichier à la pour obtenir son chemin complet.
+
 Comment savoir quel est mon séparateur ?
 
+Ouvrez votre fichier csv ou txt dans un éditeur de texte comme Notepad sur Windows ou bien TextEdit sur macOS. Si vos valeurs sur une même ligne sont séparés par des caractères spécifiques autre que l'espace ou la tabulation alors ces caractères sont votre séparateur.
+Exemple de séparateur : , ou bien encore "," 
+
 Comment savoir comment est encodé mon fichier ?
+
+Ouvrez votre fichier csv ou txt dans un éditeur de texte comme Notepad sur Windows ou bien TextEdit sur macOS. La plupart des éditeurs de texte affichent l'encodage du fichier dans la barre d'état ou dans un menu déroulant. Vous devez cherchez des termes comme "Encodage", "Charset" ou bien "Character Set". 
+Si votre fichier est un txt ou un csv et n'est pas encodé en utf-8 ce n'est pas dramatique. Vos commentaires ne seront juste pas très esthétiques.
