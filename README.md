@@ -19,7 +19,7 @@ recherche_plot.py : Ce fichier est entièrement codé en python3. Il sert à ré
 
 Les modules des bibliothèques python utilisés dans les différents fichiers sont les suivants : sys, os, re, matplotlib.
 
-## Aide
+## :ring_buoy: Aide
 Ce programme vient avec une aide qui est divisée en plusieurs catégories pour ne pas noyer l'utilisateur sous les informations ainsi si vous tapez le chemin du fichier suivi de l'option sous la forme -option vous pourrez avoir accès à ces aides. 
 
 -h : Aide qui affiche l'aide générale du programme visant à vous renseigner sur les sous-catégories d'aide.  <br>
@@ -29,7 +29,7 @@ Ce programme vient avec une aide qui est divisée en plusieurs catégories pour 
 -ht : Aide dédiée au traitement des données. Vous donne quelques renseignements sur le format que doit avoir votre fichier.
 
 
-## Paramètres
+## :gear: Paramètres
 Voici une liste des paramètres du programme ainsi que des conditions qu'ils doivent respecter. Vous retrouverez cette liste dans l'option -hp.
 
 Chemin du fichier (chemin) : Si vous êtes actuellement dans le répertoire ou se trouve votre fichier vous pouvez simplement mettre le nom du fichier ou bien ./nom_du_fichier. Sinon mettez le chemin complet depuis la racine.  <br>
@@ -56,7 +56,7 @@ Le séparateur (sep) : Correspond à la chaîne de caractères entre deux de vos
 
 Grâce à cette liste vous pouvez avoir une idées des informations qu'il vout faut connaître en amont d'exécuter le programme. Cependant pas d'inquiétudes, pour certains paramètres comme par exemple la taille du pas, si vous rentrez dans le programme une valeur invalide, celui-ci vous donnera 2 autres chances de rectifier votre valeur en vous rappelant les conditions que doit respecter votre paramètre. Si au bout des 2 chances vous ne lui aurez toujours pas donné une valeur valide alors le programme prendera fin avec un message d'erreur.
 
-## Traitement du fichier
+## :bookmark_tabs: Traitement du fichier
 
 Si vous avez un commentaire en début de votre fichier et que vous souhaitez qu'il soit correctement affichés avec les caractères du type : é,è,à...etc. Alors veillez à ce que votre fichier soit encodé en utf-8. 
 
@@ -100,7 +100,7 @@ Si vous voulez avoir strictement l'intervalle que vous avez choisit de graphé a
 Si vous choissiez une longueur d'onde fin d'intervalle plus petite que la longueur d'onde de votre début d'intervalle alors vous aurez un graphe allant de l'intervalle de dictionnaire contenant votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
 
 
-## :ring_buoy: SOS
+## :telephone: SOS
 
 Comment trouver le chemin de mon fichier ?
 
