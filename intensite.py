@@ -82,14 +82,16 @@ if (nom_colonne!="Y" and nom_colonne!="N"):
 
 
 
-if nombre_total_lignes == 1 : #Je regarde si le fichier n'a qu'une seule ligne ou pas.
+if nombre_total_lignes == 1 and nom_colonne=="Y" : #Je regarde si le fichier n'a qu'une seule ligne ou pas.
     print("\033[1;91mVotre fichier ne contient que une seule ligne qui devrait correspondre aux noms des colonnes. Soit vous n'avez pas de données mais juste des noms de colonnes et il est donc impossible de faire fonctionner ce programme soit vous n'avez pas de noms de colonnes. Merci d'en mettre en première ligne.\033[0m")
     sys.exit() #Dans ce cas j'arrête le programme avec un message d'erreur.
 else :
     fich.seek(0) #Je rembobine au début de mon fichier.
     for indice, ligne in enumerate(fich): #Je parcours toutes les lignes de mon fichier.
-        if (ligne.startswith("#") or ligne.startswith(">")):#Pour repérer les commentaires
+        if ligne.startswith("#"):#Pour repérer les commentaires
             commentaires.append(ligne) #Je récupère ces commentaires dans une liste.
+            continue
+        elif ligne.startswith(">"):
             continue
         elif nom_colonne=="Y": #Pour enlever la première ligne de mon fichier si elle correspond aux noms des colonnes.
             nom_colonne="F"
