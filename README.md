@@ -7,7 +7,7 @@ Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fich
 
 Ce programme ne nécessite pas d'arguments, cependant si vous lui en mettez qui n'est pas une option il affichera un message d'erreur et vous indiquera comment accéder à l'aide du programme. 
 
-**Fichiers du projet**
+## Fichiers du projet
 
 main.sh : Ce fichier est entièrement codé en bash et sert principalement à deux choses : récupérer et vérifier les paramètres nécessaires aux autres fichiers et donner les paramètres nécessaires à ces fichiers pour que recherche_plot.py faisant appel à intensite.py puisse s'exécuter. Ce fichier est commenté.
 
