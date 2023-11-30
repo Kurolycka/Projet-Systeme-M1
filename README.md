@@ -100,7 +100,7 @@ Si vous voulez avoir strictement l'intervalle que vous avez choisit de graphé a
 Si vous choissiez une longueur d'onde fin d'intervalle plus petite que la longueur d'onde de votre début d'intervalle alors vous aurez un graphe allant de l'intervalle de dictionnaire contenant votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
 
 
-## SOS
+## :ring_buoy: SOS
 
 Comment trouver le chemin de mon fichier ?
 
