@@ -1,6 +1,3 @@
-#Besoin de faire le README
-#Mettre dans le main que les commentaires pas traité et que les  lignes > sont automatiquement pas triées
-#et que les commentaires seront affichés
 
 #-----------------Création de l'help du programme---------------------------------
 
@@ -43,6 +40,8 @@ elif [ "$1" == "-hp" ]; then #Affichage d'une des ramifications de l'help qui es
     \e[1;36;4mLongueur d'onde de fin d'intervalle (long_fin) :\e[0m  Doit être un nombe strictement positif (0 non autorisé). Il peut être un float comme un entier mais si vous voulez un float rentrez par exemple 128.3 et non 128,3.
     Renseignez la dans l'unité que vous avez choisit pour le paramètre 'Unité de vos longueurs d'ondes'.
 
+    \e[1;36;4m Le séparateur (sep) :\e[0m La chaîne de caractère entre deux de vos valeurs numériques dans votre fichier.
+
     \e[1;32mPour certains paramètres vous aurez de nouvelles chances de rentrer le bon paramètre sans quitter le programme si vous vous êtes trompés.\e[0m
     "
     exit #Sortie du programme..
@@ -63,6 +62,8 @@ elif [ "$1" == "-hg" ]; then #Affichage d'une des ramifications de l'help qui es
     \e[1;36;4mVotre intervalle choisit pour le graphe n'est pas du tout contenu dans les données de votre fichier :\e[0m Si par exemple les données de votre fichier vont de 300 à 400 nm et que vous choisissez un intervalle pour le graphe de 100 à 200 nm alors le graphe affichera l'entièreté des données de votre fichier pour que vous puissiez vous rendre compte d'intervalles qui conviendrait mieux.
 
     \e[1;36;4m Vous voulez avoir strictement l'intervalle que vous avez choisit pour votre graphe d'affiché :\e[0m Dans ce cas vous devez initialement choisir une taille de pas de 1. 
+
+    \e[1;36;4m La longueur d'onde de votre fin d'intervalle est plus petite que la longueur d'onde de votre début d'intervalle :\e[0m Dans ce cas vous aurez un graphe allant de votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
 
     "
     exit #Sortie du programme..
