@@ -117,3 +117,5 @@ Comment savoir comment est encodé mon fichier ?
 
 Ouvrez votre fichier csv ou txt dans un éditeur de texte comme Notepad sur Windows ou bien TextEdit sur macOS. La plupart des éditeurs de texte affichent l'encodage du fichier dans la barre d'état ou dans un menu déroulant. Vous devez cherchez des termes comme "Encodage", "Charset" ou bien "Character Set".   <br>
 Si votre fichier est un txt ou un csv et n'est pas encodé en utf-8 ce n'est pas dramatique. Vos commentaires ne seront juste pas très esthétiques.
+
+:chart_with_upwards_trend:
