@@ -78,8 +78,6 @@ Si il existe des intervalles sans données correspondantes dans votre fichier al
 
 ## :chart_with_upwards_trend: Mon graphe
 
-:chart_with_upwards_trend:
-
 Fonctionnement du graphe : Vous fournissez une valeur de début d'intervalle pour le graphe et une valeur de fin d'intervalle pour le graphe et vous avez précédemment défini un pas. Tout d'abord vos données de longueurs d'ondes et leurs intensités correspondantes sont séparées en intervalles selon le pas choisi. Si par exemple vous avez des données entre 300 et 400 nm et que vous choisissez un pas de 10 vous aurez des intervalles tels que [300,310[;[310, 320[ ... [380,390[;[390,400].   <br>
 Ensuite dans le fichier recherche_plot.py le programme regarde dans quel intervalle se situe votre valeur de début d'intervalle pour le graphe et garde en mémoire cette intervalle. Il fait ensuite de même pour votre valeur de fin d'intervalle pour le graphe.  
 Ce qui sera au final affiché sur le graphe sera les intervalles dans lesquels sont contenus vos valeurs de début et de fin d'intervalle pour le graphe ainsi que tous les intervalles entre.  
