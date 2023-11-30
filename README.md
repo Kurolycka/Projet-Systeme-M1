@@ -3,7 +3,7 @@
 Ce programme traite un fichier que vous lui renseignez contenant des longueurs d'ondes et des intensitées correspondantes. Il indexe dans un dictionnaire les intensités par fenêtres de longueurs d'ondes selon une taille de pas que vous lui renseigné. Il permet aussi d'afficher un graphe des intensités en fonction des longueurs d'ondes pour un intervalle fourni en prenant en compte les intervalles de votre dictionnaire.
 
 Les fichiers main.sh, intensite.py et recherche_plot.py doivent être enregistrés dans le même répertoire/dossier. Ce n'est cependant pas une obligation pour le fichier que vous souhaitez traité.  
-Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fichier main.sh. Si vous êtes dans le répertoire où ce dernier est enregistrés vous pouvez juste taper ./main.sh 
+Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fichier main.sh. Si vous êtes dans le répertoire où ce dernier est enregistrés vous pouvez juste taper ./main.sh  
 
 Ce programme ne nécessite pas d'arguments, cependant si vous lui en mettez qui n'est pas une option il affichera un message d'erreur et vous indiquera comment accéder à l'aide du programme. 
 
