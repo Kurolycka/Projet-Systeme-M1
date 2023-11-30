@@ -15,11 +15,11 @@ intensite.py : Ce fichier est entièrement codé en python3 . Il sert à récup�
 
 recherche_plot.py : Ce fichier est entièrement codé en python3. Il sert à réaliser une représentation graphique de l'intervalle de longueur d'ondes que vous aurez renseigné en prenant en compte la taille du pas que vous avez choisit pour vos intervalles. Ce fichier est commenté.
 
-**Modules utilisés**
+## Modules utilisés
 
 Les modules des bibliothèques python utilisés dans les différents fichiers sont les suivants : sys, os, re, matplotlib.
 
-**Aide**
+## Aide
 Ce programme vient avec une aide qui est divisée en plusieurs catégories pour ne pas noyer l'utilisateur sous les informations ainsi si vous tapez le chemin du fichier suivi de l'option sous la forme -option vous pourrez avoir accès à ces aides. 
 
 -h : Aide qui affiche l'aide générale du programme visant à vous renseigner sur les sous-catégories d'aide.
@@ -29,7 +29,7 @@ Ce programme vient avec une aide qui est divisée en plusieurs catégories pour 
 -ht : Aide dédiée au traitement des données. Vous donne quelques renseignements sur le format que doit avoir votre fichier.
 
 
-**Paramètres**
+## Paramètres
 Voici une liste des paramètres du programme ainsi que des conditions qu'ils doivent respecter. Vous retrouverez cette liste dans l'option -hp.
 
 Chemin du fichier (chemin) : Si vous êtes actuellement dans le répertoire ou se trouve votre fichier vous pouvez simplement mettre le nom du fichier ou bien ./nom_du_fichier. Sinon mettez le chemin complet depuis la racine.
@@ -56,7 +56,7 @@ Le séparateur (sep) : Correspond à la chaîne de caractères entre deux de vos
 
 Grâce à cette liste vous pouvez avoir une idées des informations qu'il vout faut connaître en amont d'exécuter le programme. Cependant pas d'inquiétudes, pour certains paramètres comme par exemple la taille du pas, si vous rentrez dans le programme une valeur invalide, celui-ci vous donnera 2 autres chances de rectifier votre valeur en vous rappelant les conditions que doit respecter votre paramètre. Si au bout des 2 chances vous ne lui aurez toujours pas donné une valeur valide alors le programme prendera fin avec un message d'erreur.
 
-**Traitement du fichier**
+## Traitement du fichier
 
 Si vous avez un commentaire en début de votre fichier et que vous souhaitez qu'il soit correctement affichés avec les caractères du type : é,è,à...etc. Alors veillez à ce que votre fichier soit encodé en utf-8. 
 
@@ -76,7 +76,7 @@ Le premier intervalle commence à la première donnée de votre fichier mais la 
 Suite à vos commentaires sera affiché votre dictionnaire avec pour chaque intervalle le nombre de données d'intensitées, le minimum de ces données, le maximum et la moyenne. 
 Si il existe des intervalles sans données correspondantes dans votre fichier alors le nombre de données d'intensitées affichera "Aucunes" et les autres informations "null" mais cela n'affectera pas les autres intervalles contenant des valeurs.
 
-**Mon graphe**
+## Mon graphe
 
 Fonctionnement du graphe : Vous fournissez une valeur de début d'intervalle pour le graphe et une valeur de fin d'intervalle pour le graphe et vous avez précédemment défini un pas. Tout d'abord vos données de longueurs d'ondes et leurs intensités correspondantes sont séparées en intervalles selon le pas choisi. Si par exemple vous avez des données entre 300 et 400 nm et que vous choisissez un pas de 10 vous aurez des intervalles tels que [300,310[;[310, 320[ ... [380,390[;[390,400]. 
 Ensuite dans le fichier recherche_plot.py le programme regarde dans quel intervalle se situe votre valeur de début d'intervalle pour le graphe et garde en mémoire cette intervalle. Il fait ensuite de même pour votre valeur de fin d'intervalle pour le graphe.
@@ -100,7 +100,7 @@ Si vous voulez avoir strictement l'intervalle que vous avez choisit de graphé a
 Si vous choissiez une longueur d'onde fin d'intervalle plus petite que la longueur d'onde de votre début d'intervalle alors vous aurez un graphe allant de l'intervalle de dictionnaire contenant votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
 
 
-**SOS**
+## SOS
 
 Comment trouver le chemin de mon fichier ?
 
