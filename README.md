@@ -2,10 +2,10 @@
 
 Ce programme traite un fichier que vous lui renseignez contenant des longueurs d'ondes et des intensitées correspondantes. Il indexe dans un dictionnaire les intensités par fenêtres de longueurs d'ondes selon une taille de pas que vous lui renseigné. Il permet aussi d'afficher un graphe des intensités en fonction des longueurs d'ondes pour un intervalle fourni en prenant en compte les intervalles de votre dictionnaire.
 
-Les fichiers **main.sh**, **intensite.py** et **recherche_plot.py** doivent être enregistrés dans le même répertoire/dossier. Ce n'est cependant pas une obligation pour le fichier que vous souhaitez traité.  <br>
+:small_blue_diamond: Les fichiers **main.sh**, **intensite.py** et **recherche_plot.py** doivent être enregistrés dans le même répertoire/dossier. Ce n'est cependant pas une obligation pour le fichier que vous souhaitez traité.  <br>
 Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fichier main.sh. Si vous êtes dans le répertoire où ce dernier est enregistrés vous pouvez juste taper **./main.sh** 
 
-Ce programme ne nécessite pas d'arguments, cependant si vous lui en mettez qui n'est pas une option il affichera un message d'erreur et vous indiquera comment accéder à l'aide du programme. 
+:small_blue_diamond: Ce programme ne nécessite pas d'arguments, cependant si vous lui en mettez qui n'est pas une option il affichera un message d'erreur et vous indiquera comment accéder à l'aide du programme. 
 
 ## :page_facing_up: Fichiers du projet
 
@@ -58,20 +58,20 @@ Grâce à cette liste vous pouvez avoir une idées des informations qu'il vout f
 
 ## :bookmark_tabs: Traitement du fichier
 
-Si vous avez un commentaire en début de votre fichier et que vous souhaitez qu'il soit correctement affichés avec les caractères du type : é,è,à...etc. Alors veillez à ce que votre fichier soit encodé en utf-8. 
+:small_blue_diamond: Si vous avez un commentaire en début de votre fichier et que vous souhaitez qu'il soit correctement affichés avec les caractères du type : é,è,à...etc. Alors veillez à ce que votre fichier soit encodé en utf-8. 
 
-Il vous sera demandé si la première ligne de votre fichier (hors commentaires) correspond aux noms de vos colonnes. Si vous répondez oui alors cette première ligne ne sera pas traitée. Autrement elle le sera. Si vous dites non (N) alors que vous avez bel et bien des noms à vos colonnes cela risque d'entraîner des messages d'erreurs ou bien de fausser vos résultats. Faites attention.  <br>
+:small_blue_diamond: Il vous sera demandé si la première ligne de votre fichier (hors commentaires) correspond aux noms de vos colonnes. Si vous répondez oui alors cette première ligne ne sera pas traitée. Autrement elle le sera. Si vous dites non (N) alors que vous avez bel et bien des noms à vos colonnes cela risque d'entraîner des messages d'erreurs ou bien de fausser vos résultats. Faites attention.  <br>
 Si vous dites que vous avez des noms à vos colonnes (Y) et que vous n'avez qu'une ligne dans votre fichier en tout et pour tout (hors commentaire) alors le programme considèrera que vous n'avez pas de données et affichera un message d'erreur avant d'arrêter de s'éxécuter.
 
-Si vous voulez ajouter des lignes de commentaires dans votre fichier, ces dernières seront affichées comme premiers résultats du programme comme rappel. Cependant ces lignes de commentaires doivent automatiquement être précédées du caractère # .  <br> 
+:small_blue_diamond: Si vous voulez ajouter des lignes de commentaires dans votre fichier, ces dernières seront affichées comme premiers résultats du programme comme rappel. Cependant ces lignes de commentaires doivent automatiquement être précédées du caractère # .  <br> 
 De même les lignes commençant par > ne seront pas prises en compte pour faciliter l'usage de certains logiciels. Mais ces lignes ne seront pas considérées comme des commentaires.
 
-Pendant le traitement du fichier une vérification de type sera effectuée. En effet si les données que vous avez indiquées pour longueurs d'onde et les intensités ne sont pas des nombres (entiers ou décimaux) alors un message d'erreur sera afficher et le programme ne s'exécutera pas. Veillez à ce que toutes vos données soient bien numériques.  <br>
+:small_blue_diamond: Pendant le traitement du fichier une vérification de type sera effectuée. En effet si les données que vous avez indiquées pour longueurs d'onde et les intensités ne sont pas des nombres (entiers ou décimaux) alors un message d'erreur sera afficher et le programme ne s'exécutera pas. Veillez à ce que toutes vos données soient bien numériques.  <br>
 De même il ne sera pas accepté que vous aillez une longueur d'onde mais pas d'intensitée correspondante ou vice-versa.
 
-Il n'est pas nécessaire de trier vos longueur d'ondes dans un ordre croissante préalablement car le programme le fera automatiquement et ce sans pour autant mélanger les intensitées correspondantes. 
+:small_blue_diamond: Il n'est pas nécessaire de trier vos longueur d'ondes dans un ordre croissante préalablement car le programme le fera automatiquement et ce sans pour autant mélanger les intensitées correspondantes. 
 
-A partir de vos données et de la taille du pas (taille_fenetre) fournit préalablement un dictionnaire sera créé. Ce dictionnaira aura pour clé les intervalles de taille choisit et pour valeur les intensités des longueurs d'ondes situées dans ces intervalles triées dans un ordre croissant. Pour tous les intervalles sauf le dernier, la dernière valeur de longueur d'onde est exclus, ainsi il n'y aura pas de doublons.  <br>
+:small_blue_diamond: A partir de vos données et de la taille du pas (taille_fenetre) fournit préalablement un dictionnaire sera créé. Ce dictionnaira aura pour clé les intervalles de taille choisit et pour valeur les intensités des longueurs d'ondes situées dans ces intervalles triées dans un ordre croissant. Pour tous les intervalles sauf le dernier, la dernière valeur de longueur d'onde est exclus, ainsi il n'y aura pas de doublons.  <br>
 Le premier intervalle commence à la première donnée de votre fichier mais la réciproque n'est pas vraie pour le dernier intervalle.  <br>
 Suite à vos commentaires sera affiché votre dictionnaire avec pour chaque intervalle le nombre de données d'intensitées, le minimum de ces données, le maximum et la moyenne.   <br>
 Si il existe des intervalles sans données correspondantes dans votre fichier alors le nombre de données d'intensitées affichera "Aucunes" et les autres informations "null" mais cela n'affectera pas les autres intervalles contenant des valeurs.
@@ -82,31 +82,30 @@ Si il existe des intervalles sans données correspondantes dans votre fichier al
 Ensuite dans le fichier recherche_plot.py le programme regarde dans quel intervalle se situe votre valeur de début d'intervalle pour le graphe et garde en mémoire cette intervalle. Il fait ensuite de même pour votre valeur de fin d'intervalle pour le graphe.  
 Ce qui sera au final affiché sur le graphe sera les intervalles dans lesquels sont contenus vos valeurs de début et de fin d'intervalle pour le graphe ainsi que tous les intervalles entre.  
 
-Il vous sera demandé si vous souhaitez afficher des données relatives à votre graphe (valeur max de longueur d'onde et d'intensitée, valeur min de longueur d'onde et d'intensité, moyenne de l'intensité et moyenne de la longueur d'onde). Vous n'aurez qu'à répondre par oui (Y) ou non (N). 
+:small_blue_diamond: Il vous sera demandé si vous souhaitez afficher des données relatives à votre graphe (valeur max de longueur d'onde et d'intensitée, valeur min de longueur d'onde et d'intensité, moyenne de l'intensité et moyenne de la longueur d'onde). Vous n'aurez qu'à répondre par oui (Y) ou non (N). 
 
-Il vous sera aussi demandé si vous souhaitez afficher votre graphe sous la forme de points non reliés (scatter), vous n'aurez à nouveau qu'à répondre oui (Y) ou non (N). Si vous répondez non alors votre graphe sera affiché sous la forme d'une courbe continue violette.
+:small_blue_diamond: Il vous sera aussi demandé si vous souhaitez afficher votre graphe sous la forme de points non reliés (scatter), vous n'aurez à nouveau qu'à répondre oui (Y) ou non (N). Si vous répondez non alors votre graphe sera affiché sous la forme d'une courbe continue violette.
 
-Le graphe possédera une grille afin que vous puissiez plus facilement réaliser une étude visuelle. 
-
+:small_blue_diamond: Le graphe possédera une grille afin que vous puissiez plus facilement réaliser une étude visuelle. <br>
 Il possédera également un nom d'abscisse, un nom d'ordonnée et un titre. 
 
-Si votre valeur de début d'intervalle de graphe est plus petite que la plus petite donnée de longueur d'onde de votre fichier alors par défaut votre graphe commencera à la plus petite donnée de longueur d'onde de votre fichier.  <br>
+:small_blue_diamond: Si votre valeur de début d'intervalle de graphe est plus petite que la plus petite donnée de longueur d'onde de votre fichier alors par défaut votre graphe commencera à la plus petite donnée de longueur d'onde de votre fichier.  <br>
 De manière similaire si votre valeur de fin d'intervalle de graphe est plus grande que la plus grande donnée de longueur d'onde de votre fichier alors par défaut votre graphe se finira à la plus grande donnée de longueur d'onde de votre fichier.
 
-Si votre intervalle choisit pour le graphe n'est pas du tout contenu dans les données de votre fichier alors le graphe montrera l'entièreté de vos données pour que vous puissez vous rendre compte d'intervalles qui correspondrait mieux à vos données.
+:small_blue_diamond: Si votre intervalle choisit pour le graphe n'est pas du tout contenu dans les données de votre fichier alors le graphe montrera l'entièreté de vos données pour que vous puissez vous rendre compte d'intervalles qui correspondrait mieux à vos données.
 
-Si vous voulez avoir strictement l'intervalle que vous avez choisit de graphé alors vous devez choisir un pas de 1 pour vos intervalles de dictionnaire.
+:small_blue_diamond: Si vous voulez avoir strictement l'intervalle que vous avez choisit de graphé alors vous devez choisir un pas de 1 pour vos intervalles de dictionnaire.
 
-Si vous choissiez une longueur d'onde fin d'intervalle plus petite que la longueur d'onde de votre début d'intervalle alors vous aurez un graphe allant de l'intervalle de dictionnaire contenant votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
+:small_blue_diamond: Si vous choissiez une longueur d'onde fin d'intervalle plus petite que la longueur d'onde de votre début d'intervalle alors vous aurez un graphe allant de l'intervalle de dictionnaire contenant votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
 
 
 ## :telephone: SOS
 
 **Comment trouver le chemin de mon fichier ?**
 
-Si vous êtez sous Windows alors ouvrez l'explorateur de fichiers et allez jusqu'à l'emplacement du fichier. Ensuite faites un clic droit sur le fichier et sélectionnez "Propriétés". Dnas l'onglet "Général" vous verrez le chemin complet du fichier sous "Emplacement".
+:small_blue_diamond: Si vous êtez sous Windows alors ouvrez l'explorateur de fichiers et allez jusqu'à l'emplacement du fichier. Ensuite faites un clic droit sur le fichier et sélectionnez "Propriétés". Dnas l'onglet "Général" vous verrez le chemin complet du fichier sous "Emplacement".
 
-Si vous êtes sous macOs ou Linux alors vous pouvez ouvrir le terminal puis utilisez la commande "cd" pour naviguer jusqu'àau répertoire du fichier. Tapez alors "pwd" pour afficher le chemin du répertoire actuel. Vous n'aurez plus qu'à y ajouter le nom du fichier à la pour obtenir son chemin complet.
+:small_blue_diamond: Si vous êtes sous macOs ou Linux alors vous pouvez ouvrir le terminal puis utilisez la commande "cd" pour naviguer jusqu'àau répertoire du fichier. Tapez alors "pwd" pour afficher le chemin du répertoire actuel. Vous n'aurez plus qu'à y ajouter le nom du fichier à la pour obtenir son chemin complet.
 
 **Comment savoir quel est mon séparateur ?**
 
