@@ -19,7 +19,7 @@ Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fich
 
 Les modules des bibliothèques python utilisés dans les différents fichiers sont les suivants : **sys**, **os**, **re**, **matplotlib**.
 
-## :ring_buoy: Aide
+## :loudspeaker: Aide
 Ce programme vient avec une aide qui est divisée en plusieurs catégories pour ne pas noyer l'utilisateur sous les informations ainsi si vous tapez le chemin du fichier suivi de l'option sous la forme -option vous pourrez avoir accès à ces aides. 
 
 **-h** : Aide qui affiche l'aide générale du programme visant à vous renseigner sur les sous-catégories d'aide.  <br>
