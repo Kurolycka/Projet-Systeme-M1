@@ -96,7 +96,7 @@ if option_affichage=="Y": #Je lui affiche les données si il répond positivemen
 #-----------------------J'affiche le graphe------------------------------
 
 #Je commence par lui demander si il veut afficher des points ou bien les relier.
-scatter_rep=str(input("\033[1;32mSi vous voulez afficher le graphe sous forme de points non reliées tapez Y, sinon tapez N: \033[0m"))
+scatter_rep=str(input("\033[1;32mSi vous voulez afficher le graphe sous forme de points non reliés tapez Y, sinon tapez N: \033[0m"))
 
 somme_scatter=0 #Je définis une valeur pour savoir le nombre de tentatives effectuées par l'utilisateur pour me donner une réponse valide. 
 
@@ -106,7 +106,7 @@ if (scatter_rep!="Y" and scatter_rep!="N"):
         print("\033[1;91mTrop de tentatives erronées. Veuillez relancer le programme une fois que vous saurez quelle valeur rentrer.\033[0m")
         sys.exit()
     else: #Sinon je lui laisse encore une chance.
-        scatter_rep=str(input("\033[1;91mValeur remplie incorrecte, vous avez en tout 3 chances.\nSi vous voulez afficher le graphe sous forme de points non reliées tapez Y sinon tapez N : \033[0m"))
+        scatter_rep=str(input("\033[1;91mValeur remplie incorrecte, vous avez en tout 3 chances.\nSi vous voulez afficher le graphe sous forme de points non reliés tapez Y sinon tapez N : \033[0m"))
 
 if scatter_rep=="Y":
     plt.scatter(x_long,y_inten,color="purple")
@@ -115,6 +115,6 @@ else:
 
 plt.xlabel("Longueur d'onde ("+unite_long_onde+")")
 plt.ylabel("Intensité ("+unite_intens+")")
-plt.title("Graphe de l'intensité pour un intervalle de longueur d'onde fourni")
+plt.title("Graphe de l'intensité pour un intervalle de longueurs d'onde fourni")
 plt.grid(True)
 plt.show()
