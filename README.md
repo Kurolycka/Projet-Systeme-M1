@@ -7,7 +7,7 @@ Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fich
 
 :small_blue_diamond: Ce programme ne nécessite pas d'arguments, cependant si vous lui en mettez un qui n'est pas une option il affichera un message d'erreur et vous indiquera comment accéder à l'aide du programme. 
 
-## :page_facing_up: Fichiers du projet
+## :page_facing_up: Fichiers du projet 
 
 **main.sh** : Ce fichier est entièrement codé en bash et sert principalement à deux choses : récupérer et vérifier les paramètres nécessaires aux autres fichiers, puis les donner à recherche_plot.py qui fera appel à intensite.py. Ce fichier est commenté.
 
