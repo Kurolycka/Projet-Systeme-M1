@@ -54,7 +54,7 @@ La première colonne de votre fichier a le numéro 1 et non le numéro 0.
 **Longueur d'onde de fin d'intervalle de votre graphe (long_fin) :** Doit être un nombre strictement positif (0 non autorisé) et peut être un entier comme un décimal. Comme pour la taille du pas si vous voulez rentrer une valeur décimal veuillez rentrer par exemple la valeur 127.9 et non 127,9. Cette valeur de longueur d'onde doit être renseignée dans l'unité que vous avez choisie pour unite_long_onde.
 
 **Le séparateur (sep) :** Correspond à la chaîne de caractères entre deux de vos valeurs numériques dans votre fichier. Faites attention de ne pas oublier les guillemets " . Il vous sera demandé en amont si votre séparateur est par défaut un espace ou une tabulation.
-
+ 
 Grâce à cette liste vous pouvez avoir une idée des informations qu'il vout faut connaître en amont d'exécuter le programme. Cependant pas d'inquiétudes, pour certains paramètres, comme par exemple la taille du pas, si vous rentrez dans le programme une valeur invalide celui-ci vous donnera 2 autres chances de rectifier votre valeur en vous rappelant les conditions que doit respecter votre paramètre. Si au bout des 2 chances vous ne lui avez toujours pas donné une valeur valide alors le programme prendra fin avec un message d'erreur.
 
 ## :bookmark_tabs: Traitement du fichier
