@@ -58,7 +58,7 @@ if (sep_none!="Y" and sep_none!="N"):
 
 #Je récupère le paramètre si il me dit que ce n'est pas celui par défaut
 if sep_none=="N":
-    sep=str(input("\033[1;32mLe séparateur est la chaîne de caractère entre deux valeurs numériques.\nSi votre séparateur est une tabulation ou un espace mettez None. \nFaites attention à mettre les guillemets si il y en.\n Entrez le séparateur: \033[0m"))
+    sep=str(input("\033[1;32mLe séparateur est la chaîne de caractère entre deux valeurs numériques.\nSi votre séparateur est une tabulation ou un espace mettez None. \nFaites attention à mettre les guillemets si il y en a.\n Entrez le séparateur: \033[0m"))
 
 
 
@@ -83,12 +83,12 @@ if (nom_colonne!="Y" and nom_colonne!="N"):
 
 
 if nombre_total_lignes == 1 and nom_colonne=="Y" : #Je regarde si le fichier n'a qu'une seule ligne ou pas.
-    print("\033[1;91mVotre fichier ne contient que une seule ligne qui devrait correspondre aux noms des colonnes. Soit vous n'avez pas de données mais juste des noms de colonnes et il est donc impossible de faire fonctionner ce programme soit vous n'avez pas de noms de colonnes. Merci d'en mettre en première ligne.\033[0m")
+    print("\033[1;91mVotre fichier ne contient qu'une seule ligne qui devrait correspondre aux noms des colonnes. Soit vous n'avez pas de données mais juste des noms de colonnes et il est donc impossible de faire fonctionner ce programme soit vous n'avez pas de noms de colonnes.\033[0m")
     sys.exit() #Dans ce cas j'arrête le programme avec un message d'erreur.
 else :
     fich.seek(0) #Je rembobine au début de mon fichier.
     for indice, ligne in enumerate(fich): #Je parcours toutes les lignes de mon fichier.
-        if ligne.startswith("#"):#Pour repérer les commentaires
+        if ligne.startswith("#"):#Pour repérer les commentaires.
             commentaires.append(ligne) #Je récupère ces commentaires dans une liste.
             continue
         elif ligne.startswith(">"):
@@ -104,12 +104,12 @@ else :
                 longueur=ligne.split(sep)
             size = len(longueur)
             if (colonne_longueur_onde>size or colonne_intens>size): #Je vérifie qu'il ne m'a pas donné un numéro de colonne plus grand que le nombre de colonnes du fichier.
-                print("\033[1;91mLes valeurs données pour les indices de vos colonnes sont incorrects. Veuillez relancer le programme.\033[0m")
+                print("\033[1;91mLes valeurs données pour les indices de vos colonnes sont incorrectes. Veuillez relancer le programme.\033[0m")
                 sys.exit() #Si il l'a fait le programme s'arrête.
             longueur=[longueur[k].strip('"') for k in range(0,len(longueur))]
             longueur=[longueur[k].replace(",",".") for k in range(0,len(longueur))]
-            lamba.append(longueur[colonne_longueur_onde-1]) #Je rajoute mes valeurs de longueurs d'ondes à la liste correspondante.
-            intens.append(longueur[colonne_intens-1]) #Je rajoute mes valeurs d'intensitées à la liste correspondante. 
+            lamba.append(longueur[colonne_longueur_onde-1]) #Je rajoute mes valeurs de longueurs d'onde à la liste correspondante.
+            intens.append(longueur[colonne_intens-1]) #Je rajoute mes valeurs d'intensités à la liste correspondante. 
 
 
 
@@ -134,7 +134,7 @@ for i in range(0,len(lamba)):
         testi = float(lamba[i])
         testj = float(intens[i])
     except (ValueError,TypeError) as e: #Si j'ai une erreur car il ne peut pas les convertir en float.
-        print("\033[1;91mUne de vos valeurs de longueur d'onde ou d'intensitée n'est pas un nombre entier ou décimal. Veuillez revoir vos valeurs avant de relancer le programme. Attention aux valeurs null.\033[0m")
+        print("\033[1;91mUne de vos valeurs de longueur d'onde ou d'intensité n'est pas un nombre entier ou décimal. Veuillez revoir vos valeurs avant de relancer le programme. Attention aux valeurs null.\033[0m")
         exit() #Dans ce cas là j'affiche un message d'erreur et je sors du programme.
 
 
@@ -150,8 +150,8 @@ intens=[float(intens[i]) for i in range(0,len(intens))]
 #-----------------------Je trie mes valeurs en fonction des longueurs d'onde------------------------------
 
 
-reliees=list(zip(lamba, intens)) #Je fais correspondre mes valeurs de longueurs d'ondes avec mes valeurs d'intensitées.
-sort_reliees= sorted(reliees, key=lambda x: x[0]) #Je les trie en fonction des longueurs d'ondes (ordre croissant).
+reliees=list(zip(lamba, intens)) #Je fais correspondre mes valeurs de longueurs d'onde avec mes valeurs d'intensités.
+sort_reliees= sorted(reliees, key=lambda x: x[0]) #Je les trie en fonction des longueurs d'onde (ordre croissant).
 liste_sorted=list(zip(*sort_reliees)) #J'arrête de les faire correspondre.
 
 lamba=liste_sorted[0]
@@ -169,14 +169,14 @@ nb_fenetres=int(nb_fenetres)+1
 
 #-----------------------Je créé mon dictionnaire------------------------------
 
-#Je veux stocker mes valeurs d'intensitées dans mon dictionnaire en mettant en clefs les intervalles.
+#Je veux stocker mes valeurs d'intensités dans mon dictionnaire en mettant en clés les intervalles.
 
 lamba_rendu=int(lamba[0]) #Valeur que j'incrémenterai pour avoir les débuts de mes intervalles.
 for i in range(0, nb_fenetres): #D'où l'utilité de calculer le nombre de fenêtres.
     tempo_long=[] #Pour la liste destinée à mon graphe.
     tempo_inten=[] #idem
     inten_fenetre=[] #Liste que je mettrai en valeur de mon dico.
-    clef=[round(lamba_rendu,2), round(lamba_rendu+taille_pas,2)] #Liste que je mettrai en clef.
+    clef=[round(lamba_rendu,2), round(lamba_rendu+taille_pas,2)] #Liste que je mettrai en clé.
     lamba_rendu=lamba_rendu+taille_pas #J'incrémente.
     for k in range(0,len(lamba)):
         if k != (len(lamba)-1) : #Pour voir si l'intervalle est inclus ou exclus à la dernière longueur d'onde.
