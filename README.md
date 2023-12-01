@@ -117,3 +117,7 @@ Exemple de séparateur : , ou bien encore ","
 
 Ouvrez votre fichier csv ou txt dans un éditeur de texte comme Notepad sur Windows ou bien TextEdit sur macOS. La plupart des éditeurs de texte affichent l'encodage du fichier dans la barre d'état ou dans un menu déroulant. Vous devez chercher des termes comme "Encodage", "Charset" ou bien "Character Set".   <br>
 Si votre fichier est un txt ou un csv et n'est pas encodé en utf-8 ce n'est pas dramatique. Vos commentaires ne seront juste pas très esthétiques.
+
+## :pen_ballpoint: Autrice du programme
+
+L'entièreté de ce programme a été écrite par Manon NOLOT, dans le cadre d'un projet de Système du master de Physique Numérique de l'université de Montpellier. 
