@@ -7,7 +7,7 @@ Pour lancer le programme allez dans votre terminal, puis tapez le chemin du fich
 
 :small_blue_diamond: Ce programme ne nécessite pas d'arguments, cependant si vous lui en mettez un qui n'est pas une option il affichera un message d'erreur et vous indiquera comment accéder à l'aide du programme. 
 
-## :page_facing_up: Fichiers du projet
+## :page_facing_up: Fichiers du projet 
 
 **main.sh** : Ce fichier est entièrement codé en bash et sert principalement à deux choses : récupérer et vérifier les paramètres nécessaires aux autres fichiers, puis les donner à recherche_plot.py qui fera appel à intensite.py. Ce fichier est commenté.
 
@@ -54,7 +54,7 @@ La première colonne de votre fichier a le numéro 1 et non le numéro 0.
 **Longueur d'onde de fin d'intervalle de votre graphe (long_fin) :** Doit être un nombre strictement positif (0 non autorisé) et peut être un entier comme un décimal. Comme pour la taille du pas si vous voulez rentrer une valeur décimal veuillez rentrer par exemple la valeur 127.9 et non 127,9. Cette valeur de longueur d'onde doit être renseignée dans l'unité que vous avez choisie pour unite_long_onde.
 
 **Le séparateur (sep) :** Correspond à la chaîne de caractères entre deux de vos valeurs numériques dans votre fichier. Faites attention de ne pas oublier les guillemets " . Il vous sera demandé en amont si votre séparateur est par défaut un espace ou une tabulation.
-
+ 
 Grâce à cette liste vous pouvez avoir une idée des informations qu'il vout faut connaître en amont d'exécuter le programme. Cependant pas d'inquiétudes, pour certains paramètres, comme par exemple la taille du pas, si vous rentrez dans le programme une valeur invalide celui-ci vous donnera 2 autres chances de rectifier votre valeur en vous rappelant les conditions que doit respecter votre paramètre. Si au bout des 2 chances vous ne lui avez toujours pas donné une valeur valide alors le programme prendra fin avec un message d'erreur.
 
 ## :bookmark_tabs: Traitement du fichier
@@ -117,3 +117,7 @@ Exemple de séparateur : , ou bien encore ","
 
 Ouvrez votre fichier csv ou txt dans un éditeur de texte comme Notepad sur Windows ou bien TextEdit sur macOS. La plupart des éditeurs de texte affichent l'encodage du fichier dans la barre d'état ou dans un menu déroulant. Vous devez chercher des termes comme "Encodage", "Charset" ou bien "Character Set".   <br>
 Si votre fichier est un txt ou un csv et n'est pas encodé en utf-8 ce n'est pas dramatique. Vos commentaires ne seront juste pas très esthétiques.
+
+## :pen: Autrice du programme
+
+L'entièreté de ce programme a été écrite par Manon NOLOT, dans le cadre d'un projet de Système du master de Physique Numérique de l'université de Montpellier. 
