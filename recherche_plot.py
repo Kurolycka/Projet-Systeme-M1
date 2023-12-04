@@ -100,7 +100,7 @@ scatter_rep=str(input("\033[1;32mSi vous voulez afficher le graphe sous forme de
 
 somme_scatter=0 #Je définis une valeur pour savoir le nombre de tentatives effectuées par l'utilisateur pour me donner une réponse valide. 
 
-if (scatter_rep!="Y" and scatter_rep!="N"):
+while (scatter_rep!="Y" and scatter_rep!="N"):
     somme_scatter+=1
     if somme_scatter==3: #Lorsqu'il a dejà fait trop de tentatives (3).
         print("\033[1;91mTrop de tentatives erronées. Veuillez relancer le programme une fois que vous saurez quelle valeur rentrer.\033[0m")
