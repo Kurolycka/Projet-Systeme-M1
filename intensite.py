@@ -48,13 +48,13 @@ sep_none=str(input("\033[1;32mSi votre séparateur est un espace ou une tabulati
 
 somme_none=0 #Pour savoir combien de fois l'utilisateur a déjà donné une valeur invalide.
 
-if (sep_none!="Y" and sep_none!="N"):
+while (sep_none!="Y" and sep_none!="N"):
     somme_none+=1
     if somme_none==3: #Lorsqu'il a dejà fait trop de tentatives (3).
-        print("\e[1;31mTrop de tentatives erronées. Veuillez relancer le programme une fois que vous saurez quelle valeur rentrer.\e[0m")
+        print("\033[1;91mTrop de tentatives erronées. Veuillez relancer le programme une fois que vous saurez quelle valeur rentrer.\033[0m")
         sys.exit()
     else: #Sinon je lui laisse encore une chance.
-        sep_none=str(input("\033[1;91mValeur remplie incorrecte, il vous reste 2 chances.\nSi votre séparateur est un espace ou une tabulation tapez Y sinon tapez N : \033[0m"))
+        sep_none=str(input("\033[1;91mValeur remplie incorrecte.\nSi votre séparateur est un espace ou une tabulation tapez Y sinon tapez N : \033[0m"))
 
 #Je récupère le paramètre si il me dit que ce n'est pas celui par défaut
 if sep_none=="N":
