@@ -64,7 +64,7 @@ elif [ "$1" == "-hg" ]; then #Affichage d'une des ramifications de l'help qui es
 
     \e[1;36;4mVotre intervalle choisit pour le graphe n'est pas du tout contenu dans les données de votre fichier :\e[0m Si par exemple les données de votre fichier vont de 300 à 400 nm et que vous choisissez un intervalle pour le graphe de 100 à 200 nm alors le graphe affichera l'entièreté des données de votre fichier pour que vous puissiez vous rendre compte d'intervalles qui conviendrait mieux.
 
-    \e[1;36;4m Vous voulez avoir strictement l'intervalle que vous avez choisit pour votre graphe d'affiché :\e[0m Dans ce cas vous devez initialement choisir une taille de pas de 1. 
+    \e[1;36;4m Vous voulez avoir strictement l'intervalle que vous avez choisit pour votre graphe d'affiché :\e[0m Dans ce cas vous devez initialement choisir une taille de pas de 1 et si vous voulez un intervalle de 500 à 600 par exemple vous devez mettre 599 comme valeur de fin d'intervalle. En effet, exception faites du dernier intervalle, les intervalles sont semi-ouverts.
 
     \e[1;36;4m La longueur d'onde de votre fin d'intervalle est plus petite que la longueur d'onde de votre début d'intervalle :\e[0m Dans ce cas vous aurez un graphe allant de votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
 
