@@ -21,6 +21,7 @@ fich=open(sys.argv[1], "r", encoding="utf-8") #Le fichier correspond au premier 
 lamba=[] #ma liste de longueur d'onde
 intens=[] #ma liste d'intensités
 liste_retour=[] #ma liste de liste de liste pour faire le graphe
+liste_clefs=[] #ma liste pour les intervalles de mon graphe
 dico={} #dictionnaire pour le print
 
 maximum=[] #liste pour les maximums des intervalles
@@ -72,7 +73,7 @@ nom_colonne=str(input("\033[1;32mSi la première ligne de vos données correspon
 
 somme_nom_colonne=0 #Pour compter le nombre de tentatives avec des valeurs invalides.
 
-if (nom_colonne!="Y" and nom_colonne!="N"):
+while (nom_colonne!="Y" and nom_colonne!="N"):
     somme_nom_colonne+=1
     if somme_nom_colonne==3: #Lorsqu'il a dejà fait trop de tentatives (3).
         print("\033[1;91mTrop de tentatives erronées. Veuillez relancer le programme une fois que vous saurez quelle valeur rentrer.\033[0m")
@@ -171,7 +172,7 @@ nb_fenetres=int(nb_fenetres)+1
 
 #Je veux stocker mes valeurs d'intensités dans mon dictionnaire en mettant en clés les intervalles.
 
-lamba_rendu=int(lamba[0]) #Valeur que j'incrémenterai pour avoir les débuts de mes intervalles.
+lamba_rendu=int(lamba[0])-1 #Valeur que j'incrémenterai pour avoir les débuts de mes intervalles.
 for i in range(0, nb_fenetres): #D'où l'utilité de calculer le nombre de fenêtres.
     tempo_long=[] #Pour la liste destinée à mon graphe.
     tempo_inten=[] #idem
@@ -189,6 +190,7 @@ for i in range(0, nb_fenetres): #D'où l'utilité de calculer le nombre de fenê
                inten_fenetre.append(intens[k])
                tempo_long.append(lamba[k])
                tempo_inten.append(intens[k])
+    liste_clefs.append(clef) #pour tracer mon graphe
     tempo_1=[tempo_long,tempo_inten] #Pour la liste pour le graphe.
     liste_retour.append(tempo_1) #Liste finale pour le graphe pour cet intervalle.
     if len(inten_fenetre) != 0: #Dans le cas où j'ai des valeurs dans mon intervalle.
@@ -223,8 +225,10 @@ for i in range(0, nb_fenetres): #D'où l'utilité de calculer le nombre de fenê
 
 indice=0 #Pour parcourir mon dictionnaire, valeur que j'incrémenterai.
 for i in dico.keys():
+    if type(moyenne[indice])==float :
+        moyenne[indice]=round(moyenne[indice],2)
     print("Intervalle :",i,"\n nombre de données d'intensité :",nombre[indice],"\n minimum des données : ",minimum[indice],
-          "\n maximum des données : ", maximum[indice], "\n moyenne des données : ",round(moyenne[indice],2),"\n")
+          "\n maximum des données : ", maximum[indice], "\n moyenne des données : ",moyenne[indice],"\n")
     indice += 1
 
 
