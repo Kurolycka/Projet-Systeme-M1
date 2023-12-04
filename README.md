@@ -95,7 +95,7 @@ De manière similaire si votre valeur de fin d'intervalle de graphe est plus gra
 
 :small_blue_diamond: Si votre intervalle choisit pour le graphe n'est pas du tout contenu dans les données de votre fichier alors le graphe montrera l'entièreté de vos données pour que vous puissez vous rendre compte d'intervalles qui correspondrait mieux à vos données.
 
-:small_blue_diamond: Si vous voulez avoir strictement l'intervalle que vous avez choisi de tracer alors vous devez choisir un pas de 1 pour vos intervalles de dictionnaire.
+:small_blue_diamond: Si vous voulez avoir strictement l'intervalle que vous avez choisi de tracer alors vous devez choisir un pas de 1 pour vos intervalles de dictionnaire.De plus si vous voulez un intervalle de 500 à 600 par exemple vous devez mettre 599 comme valeur de fin d'intervalle. En effet, exception faites du dernier intervalle, les intervalles sont semi-ouverts.
 
 :small_blue_diamond: Si vous choisissez une longueur d'onde de fin d'intervalle plus petite que la longueur d'onde de votre début d'intervalle alors vous aurez un graphe allant de l'intervalle de dictionnaire contenant votre longueur d'onde de début d'intervalle jusqu'à la plus grande valeur de longueur d'onde de vos données.
 
