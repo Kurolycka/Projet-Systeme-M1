@@ -118,6 +118,18 @@ Exemple de séparateur : , ou bien encore ","
 Ouvrez votre fichier csv ou txt dans un éditeur de texte comme Notepad sur Windows ou bien TextEdit sur macOS. La plupart des éditeurs de texte affichent l'encodage du fichier dans la barre d'état ou dans un menu déroulant. Vous devez chercher des termes comme "Encodage", "Charset" ou bien "Character Set".   <br>
 Si votre fichier est un txt ou un csv et n'est pas encodé en utf-8 ce n'est pas dramatique. Vos commentaires ne seront juste pas très esthétiques.
 
+## Exemples de résultats du programme.
+
+Pour un fichier nommé par exemple Spectre_photoluminescence.txt, qui a des valeurs de longueurs d'onde dans la première colonne et des valeurs d'intensités dans la deuxième colonne et dont le séparateur est "," je choisis les paramètres suivant : 
+
+:small_blue_diamond: Taille du pas : 10.5 <br>
+:small_blue_diamond: Unité des longueurs d'onde : nm <br>
+:small_blue_diamond: Unité des intensités : A <br>
+:small_blue_diamond: Longueur d'onde en nm de début d'intervalle pour le graphe : 410.9 <br>
+:small_blue_diamond: Longueur d'onde en nm de fin d'intervalle pour le graphe : 508.7 <br>
+:small_blue_diamond: Si votre séparateur est un espace ou une tabulation tapez Y sinon tapez N : N
+:small_blue_diamond: 
+
 ## :pen: Autrice du programme
 
 L'entièreté de ce programme a été écrite par Manon NOLOT, dans le cadre d'un projet de Système du master de Physique Numérique de l'université de Montpellier. 
