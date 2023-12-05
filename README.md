@@ -135,8 +135,6 @@ Pour un fichier nommé par exemple Spectre_photoluminescence.txt, qui a des vale
 
 ![Exemple de données d'intervalles](https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/66efc132-2d7b-4b05-bbbf-b8965e101cc1)
 
-![Exemple d'affichage de votre dictionnaire d'intervalles](<img width="274" alt="image" src="https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/58851816-1572-40a4-8d6c-6acee6986547">)
-
 :small_blue_diamond: Voulez vous afficher les données (minimum, maximum...) correspondant au graphe ? Si oui tapez Y sinon tapez N: Y
 
 ![Exemple d'affichage des données de graphe](https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/e1ed4fc3-fd7a-482a-a663-681f16055bc3)
