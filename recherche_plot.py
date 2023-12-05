@@ -35,7 +35,7 @@ deb_ind=0
 fin_ind=len(ma_liste)-1 
 
 #Je cherche l'intervalle du dictionnaire dans lequel se trouve la longueur d'onde de début d'intervalle pour le graphe et j'en récupère l'indice dans deb_ind.:
-for i in range(0,len(ma_liste)-1):
+for i in range(0,len(ma_liste)):
     if long_deb >= liste_clefs[i][0] and long_deb < liste_clefs[i][-1]:
         deb_ind=i
         break 
