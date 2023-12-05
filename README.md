@@ -127,8 +127,11 @@ Pour un fichier nommé par exemple Spectre_photoluminescence.txt, qui a des vale
 :small_blue_diamond: Unité des intensités : A <br>
 :small_blue_diamond: Longueur d'onde en nm de début d'intervalle pour le graphe : 410.9 <br>
 :small_blue_diamond: Longueur d'onde en nm de fin d'intervalle pour le graphe : 508.7 <br>
-:small_blue_diamond: Si votre séparateur est un espace ou une tabulation tapez Y sinon tapez N : N
+:small_blue_diamond: Si votre séparateur est un espace ou une tabulation tapez Y sinon tapez N : N <br>
+:small_blue_diamond: Le séparateur est la chaîne de caractère entre deux valeurs numériques. Si votre séparateur est une tabulation ou un espace mettez None. Faites attention à mettre les guillemets si il y en a. Entrez le séparateur: "," <br>
+:small_blue_diamond: Si la première ligne de vos données correspond aux noms de vos colonnes et qu'elle n'est pas mise en commentaire (avec le #) tapez Y, sinon tapez N : N <br>
 :small_blue_diamond: 
+
 
 ## :pen: Autrice du programme
 
