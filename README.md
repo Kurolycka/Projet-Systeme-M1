@@ -131,13 +131,14 @@ Pour un fichier nommé par exemple Spectre_photoluminescence.txt, qui a des vale
 :small_blue_diamond: Le séparateur est la chaîne de caractère entre deux valeurs numériques. Si votre séparateur est une tabulation ou un espace mettez None. Faites attention à mettre les guillemets si il y en a. Entrez le séparateur: "," <br>
 :small_blue_diamond: Si la première ligne de vos données correspond aux noms de vos colonnes et qu'elle n'est pas mise en commentaire (avec le #) tapez Y, sinon tapez N : N <br>
 
-![Exemple d'affichage de votre commentaire](<img width="845" alt="commentaires" src="https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/6c522a20-698f-485a-a2de-b6d16cd9f048">)
+<img width="845" alt="commentaires" src="https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/dc1467d7-96db-4352-a9e1-0dd49fcea8c4">
 
 ![Exemple d'affichage de votre dictionnaire d'intervalles](<img width="274" alt="image" src="https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/58851816-1572-40a4-8d6c-6acee6986547">)
 
 :small_blue_diamond: Voulez vous afficher les données (minimum, maximum...) correspondant au graphe ? Si oui tapez Y sinon tapez N: Y
 
-![Exemple d'affichage des données spécifiques au graphe](<img width="785" alt="image" src="https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/33f41f32-6c7a-4590-84e5-2d951f71030f">)
+![Exemple d'affichage des données de graphe](https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/e1ed4fc3-fd7a-482a-a663-681f16055bc3)
+
 
 Si vous voulez afficher le graphe sous forme de points non reliés tapez Y, sinon tapez N: N
 
