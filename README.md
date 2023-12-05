@@ -1,5 +1,5 @@
 # Projet-Systeme-M1
-
+ 
 Ce programme traite un fichier que vous lui renseignez contenant des longueurs d'onde et des intensités correspondantes. Il indexe dans un dictionnaire les intensités par fenêtres de longueurs d'onde selon une taille de pas que vous lui renseignez. Il permet aussi d'afficher un graphe des intensités en fonction des longueurs d'onde pour un intervalle fourni en prenant en compte les intervalles de votre dictionnaire.
 
 :small_blue_diamond: Les fichiers **main.sh**, **intensite.py** et **recherche_plot.py** doivent être enregistrés dans le même répertoire/dossier. Ce n'est cependant pas une obligation pour le fichier que vous souhaitez traiter.  <br>
