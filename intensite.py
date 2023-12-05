@@ -22,12 +22,12 @@ lamba=[] #ma liste de longueur d'onde
 intens=[] #ma liste d'intensités
 liste_retour=[] #ma liste de liste de liste pour faire le graphe
 liste_clefs=[] #ma liste pour les intervalles de mon graphe
-dico={} #dictionnaire pour le print
+dico_intervalles={} #dictionnaire pour le print
 
-maximum=[] #liste pour les maximums des intervalles
-minimum=[] #liste pour les minimums des intervalles
-moyenne=[] #liste pour les moyennes des intervalles
-nombre=[] #liste pour le nombre de valeurs d'intensités dans chaque intervalle
+maximum_inten=[] #liste pour les maximums des intervalles
+minimum_inten=[] #liste pour les minimums des intervalles
+moyenne_inten=[] #liste pour les moyennes des intervalles
+nombre_inten=[] #liste pour le nombre de valeurs d'intensités dans chaque intervalle
 commentaires=[] #Je récupère les commentaires du fichier.
 
 
@@ -200,22 +200,22 @@ for i in range(0, nb_fenetres): #D'où l'utilité de calculer le nombre de fenê
           clef_dic=clef_dic+"["
         else : #Dans le cas où c'est le dernier intervalle.
             clef_dic=clef_dic+"]"
-        dico[clef_dic]=inten_fenetre #Puis j'ajoute à mes listes et à mon dictionnaire.
-        minimum.append(inten_fenetre[0])
-        maximum.append(inten_fenetre[len(inten_fenetre)-1])
-        moyenne.append(sum(inten_fenetre)/len(inten_fenetre))
-        nombre.append(len(inten_fenetre))
+        dico_intervalles[clef_dic]=inten_fenetre #Puis j'ajoute à mes listes et à mon dictionnaire.
+        minimum_inten.append(inten_fenetre[0])
+        maximum_inten.append(inten_fenetre[len(inten_fenetre)-1])
+        moyenne_inten.append(sum(inten_fenetre)/len(inten_fenetre))
+        nombre_inten.append(len(inten_fenetre))
     else : #Dans le cas où je n'ai pas de valeurs pour cet intervalle.
         clef_dic = str(clef).split("]")[0] #J'affiche correctement l'intervalle en string en fonction de si il est exclu ou inclus.
         if i != (nb_fenetres-1): #Pour exclus.
           clef_dic=clef_dic+"["
         else : #Pour inclus.
             clef_dic=clef_dic+"]"
-        dico[clef_dic]="Aucunes" #Puis j'ajoute à mes listes et à mon dictionnaire.
-        minimum.append("null")
-        maximum.append("null")
-        moyenne.append("null")
-        nombre.append("null")
+        dico_intervalles[clef_dic]="Aucunes" #Puis j'ajoute à mes listes et à mon dictionnaire.
+        minimum_inten.append("null")
+        maximum_inten.append("null")
+        moyenne_inten.append("null")
+        nombre_inten.append("null")
 
 
 
@@ -224,11 +224,11 @@ for i in range(0, nb_fenetres): #D'où l'utilité de calculer le nombre de fenê
 
 
 indice=0 #Pour parcourir mon dictionnaire, valeur que j'incrémenterai.
-for i in dico.keys():
-    if type(moyenne[indice])==float :
-        moyenne[indice]=round(moyenne[indice],2)
-    print("Intervalle :",i,"\n nombre de données d'intensité :",nombre[indice],"\n minimum des données : ",minimum[indice],
-          "\n maximum des données : ", maximum[indice], "\n moyenne des données : ",moyenne[indice],"\n")
+for i in dico_intervalles.keys():
+    if type(moyenne_inten[indice])==float :
+        moyenne_inten[indice]=round(moyenne_inten[indice],2)
+    print("Intervalle :",i,"\n nombre de données d'intensité :",nombre_inten[indice],"\n minimum des données : ",minimum_inten[indice],
+          "\n maximum des données : ", maximum_inten[indice], "\n moyenne des données : ",moyenne_inten[indice],"\n")
     indice += 1
 
 
