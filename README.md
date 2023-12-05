@@ -131,7 +131,7 @@ Pour un fichier nommé par exemple Spectre_photoluminescence.txt, qui a des vale
 :small_blue_diamond: Le séparateur est la chaîne de caractère entre deux valeurs numériques. Si votre séparateur est une tabulation ou un espace mettez None. Faites attention à mettre les guillemets si il y en a. Entrez le séparateur: "," <br>
 :small_blue_diamond: Si la première ligne de vos données correspond aux noms de vos colonnes et qu'elle n'est pas mise en commentaire (avec le #) tapez Y, sinon tapez N : N <br>
 
-![Exemple d'affichage de votre commentaire](<img width="845" alt="image" src="https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/dcabf9fa-a4b3-4dc5-ad97-5948bee88593">)
+![Exemple d'affichage de votre commentaire](<img width="845" alt="commentaires" src="https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/6c522a20-698f-485a-a2de-b6d16cd9f048">)
 
 ![Exemple d'affichage de votre dictionnaire d'intervalles](<img width="274" alt="image" src="https://github.com/Kurolycka/Projet-Systeme-M1/assets/150124061/58851816-1572-40a4-8d6c-6acee6986547">)
 
